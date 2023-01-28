@@ -9,13 +9,13 @@ function App() {
   const [username, setUsername] = useState('');
 
   useEffect(() => {
-    Axios.get('https://mern-simple.herokuapp.com/getUsers').then((response) => {
+    Axios.get('https://master--tangerine-parfait-154db4.netlify.app/.netlify/functions/api/getUsers').then((response) => {
       setListOfUsers(response.data);
     });
   }, []);
 
   const createUser = () => {
-    Axios.post('https://mern-simple.herokuapp.com/createUser', {
+    Axios.post('https://master--tangerine-parfait-154db4.netlify.app/.netlify/functions/api/createUser', {
       name,
       age,
       username,
